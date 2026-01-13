@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import GraphPaperGrid from "@/components/GraphPaperGrid";
 
 const neueMontreal = localFont({
   src: [
@@ -46,7 +47,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={neueMontreal.variable}>
-      <body className="antialiased">
+      <body className="antialiased relative">
+        <GraphPaperGrid />
         {children}
       </body>
     </html>

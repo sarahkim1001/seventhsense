@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import NavLinks from "./NavLinks";
+import GraphPaperGrid from "./GraphPaperGrid";
 
 interface PageLayoutProps {
   title: string;
@@ -12,7 +14,10 @@ interface PageLayoutProps {
 export default function PageLayout({ title, heroTitle, headerAlignLeft = false, hideHeader = false, children }: PageLayoutProps) {
   const displayTitle = heroTitle || title;
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black relative">
+      {/* Graph Paper Grid Background - Global */}
+      <GraphPaperGrid />
+      
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
@@ -27,36 +32,7 @@ export default function PageLayout({ title, heroTitle, headerAlignLeft = false, 
             </Link>
 
             {/* Navigation Links - Right */}
-            <div className="flex items-center gap-8">
-              <Link
-                href="/audits"
-                className="text-xs tracking-widest text-black"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-              >
-                audits
-              </Link>
-              <Link
-                href="/art"
-                className="text-xs tracking-widest text-black"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-              >
-                art
-              </Link>
-              <Link
-                href="/glossary"
-                className="text-xs tracking-widest text-black"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-              >
-                glossary
-              </Link>
-              <Link
-                href="/about"
-                className="text-xs tracking-widest text-black"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-              >
-                about
-              </Link>
-            </div>
+            <NavLinks />
           </div>
         </div>
       </nav>
@@ -74,7 +50,7 @@ export default function PageLayout({ title, heroTitle, headerAlignLeft = false, 
       )}
 
       {/* Body Content */}
-      <main className="mx-auto max-w-7xl px-6 md:px-12 pb-24">
+      <main className="mx-auto max-w-7xl px-6 md:px-12 pb-80">
         {children}
       </main>
 

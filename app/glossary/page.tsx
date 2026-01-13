@@ -2,6 +2,7 @@
 
 import PageLayout from "@/components/PageLayout";
 import { motion } from "framer-motion";
+import BiologicalLetterNetwork from "@/components/BiologicalLetterNetwork";
 
 const lexiconEntries = [
   {
@@ -51,9 +52,12 @@ const lexiconEntries = [
 export default function GlossaryPage() {
   return (
     <PageLayout title="glossary" headerAlignLeft hideHeader>
-      <div className="-mx-6 md:-mx-12">
+      {/* Biological Letter Network Background */}
+      <BiologicalLetterNetwork />
+
+      <div className="-mx-6 md:-mx-12 relative z-10">
         {/* Custom Hero Section */}
-        <div className="pl-6 md:pl-24 pb-24 pt-24">
+        <div className="flex min-h-screen flex-col items-center justify-center px-6 md:px-12 pb-24 pt-24">
           {/* Tier 1: Label */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +67,7 @@ export default function GlossaryPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0,
             }}
-            className="mb-2 text-[10px] uppercase tracking-[0.4em] text-black/25"
+            className="mb-2 text-center text-[10px] uppercase tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
             foundational lexicons
@@ -78,8 +82,8 @@ export default function GlossaryPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.15,
             }}
-            className="mb-40 text-[4.5rem] md:text-[6.75rem] lowercase tracking-tighter leading-[0.85]"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            className="mb-6 text-center text-5xl md:text-7xl lowercase tracking-wide leading-[0.95]"
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
           >
             the semantic map
           </motion.h1>
@@ -93,7 +97,7 @@ export default function GlossaryPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.3,
             }}
-            className="mb-32 text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
+            className="mb-32 text-center text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             for keeping in mind (mind keeping).

@@ -7,31 +7,24 @@ import { motion } from "framer-motion";
 const auditEntries = [
   {
     id: "001",
-    title: "the synthetic gaze",
-    category: "biological system",
+    title: "Imaginary Atrophy",
+    category: "cognitive erosion",
     date: "jan 2026",
-    href: "#",
+    href: "/audits/friction-maxxing",
   },
   {
     id: "002",
-    title: "proprioceptive architectures",
-    category: "interface",
-    date: "dec 2025",
-    href: "#",
+    title: "the uncanny valley of connectivity",
+    category: "social disconnection",
+    date: "jan 2025",
+    href: "/audits/synthetic-gaze",
   },
   {
     id: "003",
-    title: "algorithmic ritual",
-    category: "interface",
-    date: "nov 2025",
-    href: "#",
-  },
-  {
-    id: "004",
-    title: "data as sacrament",
-    category: "biological system",
-    date: "oct 2025",
-    href: "#",
+    title: "unlively trades: a map for a mirror",
+    category: "cognitive erosion",
+    date: "jan 2026",
+    href: "/audits/unlively-trades",
   },
 ];
 
@@ -40,7 +33,7 @@ export default function AuditsPage() {
     <PageLayout title="audits" headerAlignLeft hideHeader>
       <div className="-mx-6 md:-mx-12">
         {/* Custom Hero Section */}
-        <div className="pl-6 md:pl-24 pb-24 pt-24">
+        <div className="flex min-h-screen flex-col items-center justify-center px-6 md:px-12 pb-24 pt-24">
           {/* Tier 1: Label */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,10 +43,10 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0,
             }}
-            className="mb-2 text-[10px] uppercase tracking-[0.4em] text-black/25"
+            className="mb-2 text-center text-[10px] uppercase tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            tracing origin
+            investigations
           </motion.div>
 
           {/* Tier 2: Primary Header */}
@@ -65,10 +58,10 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.15,
             }}
-            className="mb-40 text-[4.5rem] md:text-[6.75rem] lowercase tracking-tighter leading-[0.85]"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            className="mb-6 text-center text-5xl md:text-7xl lowercase tracking-wide leading-[0.95]"
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
           >
-            reflections on reflexes
+            multifaceted ways of being
           </motion.h1>
 
           {/* Tier 3: Secondary Header */}
@@ -80,10 +73,10 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.3,
             }}
-            className="mb-32 text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
+            className="mb-32 text-center text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
-            the evolution of presence across the information age.
+            tracing the evolution of presence and hybrid spaces.
           </motion.h2>
         </div>
 
@@ -114,7 +107,7 @@ export default function AuditsPage() {
 
                   {/* Category (15%) */}
                   <div
-                    className="w-[15%] text-[10px] uppercase tracking-widest text-black/50"
+                    className="w-[15%] ml-12 text-[10px] uppercase tracking-widest text-black/50"
                     style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
                   >
                     {audit.category}
