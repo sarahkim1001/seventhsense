@@ -44,7 +44,7 @@ export default function AboutPage() {
     <PageLayout title="about" headerAlignLeft hideHeader>
       <div className="-mx-6 md:-mx-12">
         {/* Custom Hero Section */}
-        <div className="relative flex min-h-screen flex-col items-center justify-center px-6 md:px-12 pb-32 pt-24">
+        <div className="relative flex flex-col items-center px-6 md:px-12 pb-32" style={{ paddingTop: '9rem' }}>
           {/* Biological Growth Background */}
           <BiologicalGrowth />
           {/* Tier 1: Label */}
@@ -59,7 +59,7 @@ export default function AboutPage() {
             className="mb-2 text-center text-[10px] uppercase tracking-[0.4em] text-black/30 relative z-10"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            about&nbsp;&nbsp;&nbsp;s&nbsp;e&nbsp;v&nbsp;e&nbsp;n&nbsp;t&nbsp;h&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;e&nbsp;n&nbsp;s&nbsp;e
+            about seventh sense
           </motion.div>
 
           {/* Tier 2: Primary Header */}
@@ -71,10 +71,10 @@ export default function AboutPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.15,
             }}
-            className="mb-6 text-center text-5xl md:text-7xl lowercase tracking-wide leading-[0.95] relative z-10"
+            className="mb-6 text-center text-5xl md:text-7xl leading-[0.95] relative z-10"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
           >
-            archaeologies of the <br></br>cyborgian organism 
+            Archaeologies of the <br></br>Cyborgian Organism 
           </motion.h1>
           {/* Tier 3: Secondary Header */}
           <motion.h2
@@ -85,15 +85,15 @@ export default function AboutPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.3,
             }}
-            className="mb-32 text-center text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
+            className="mb-12 text-center text-2xl md:text-3xl tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
-         amidst the age of information
+         Amidst the Age of Information
           </motion.h2>
         </div>
 
         {/* Triptych Grid */}
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-24 md:space-y-32" style={{ marginTop: '2rem' }}>
           {triptychModules.map((module, index) => (
             <motion.div
               key={module.label}
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
                 {/* Module Title */}
                 <h2
-                  className="mb-6 text-2xl md:text-3xl lowercase tracking-tight"
+                  className="mb-6 text-2xl md:text-3xl tracking-tight"
                   style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
                 >
                   {module.title}

@@ -7,7 +7,7 @@ const auditData = {
   number: "003",
   trace: "persistent",
   coordinate: "jan 2026",
-  title: "unlively trades: a map for a mirror",
+  title: "Unlively Trades: A Map for a Mirror",
   subject: "cyborgian" as const,
   sections: {
     lure: "In the corridors of the modern interface, people may find themselves navigating a high-fidelity echo-location of the ego. This is the neurobiological allure of the predictive loop. The brain is a \"prediction machine\" designed to minimize surprise; the algorithm feeds this desire by ensuring every scroll validates the existing boundaries of one's identity. As Byung-Chul Han observes, this creates a landscape scrubbed of the \"violence\" of difference. The front-facing camera serves as a digital Narcissus pool where the \"Second Body\" is constantly polished, providing a dopamine hit that rewards the brain for finding exactly what it expected: itself.",
@@ -27,7 +27,7 @@ const auditData = {
 export default function UnlivelyTradesAuditPage() {
   return (
     <PageLayout title="audit" headerAlignLeft hideHeader>
-      <div className="pl-6 md:pl-24 pt-24">
+      <div className="pl-6 md:pl-24 pt-6">
         <SpectralAudit {...auditData} />
       </div>
     </PageLayout>

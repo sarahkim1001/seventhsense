@@ -27,7 +27,7 @@ const auditData = {
 export default function AuditDetailPage() {
   return (
     <PageLayout title="audit" headerAlignLeft hideHeader>
-      <div className="pl-6 md:pl-24 pt-24">
+      <div className="pl-6 md:pl-24 pt-6">
         <SpectralAudit {...auditData} />
       </div>
     </PageLayout>

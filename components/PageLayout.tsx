@@ -19,16 +19,16 @@ export default function PageLayout({ title, heroTitle, headerAlignLeft = false, 
       <GraphPaperGrid />
       
       {/* Nav */}
-      <nav className="sticky top-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur-sm">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <div className="flex items-center justify-between py-6">
             {/* Logo - Left */}
             <Link
               href="/"
               className="text-black"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700, letterSpacing: "0.2em" }}
+              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
             >
-              s&nbsp;e&nbsp;v&nbsp;e&nbsp;n&nbsp;t&nbsp;h&nbsp;&nbsp;&nbsp;s&nbsp;e&nbsp;n&nbsp;s&nbsp;e
+              Seventh Sense
             </Link>
 
             {/* Navigation Links - Right */}
@@ -39,9 +39,9 @@ export default function PageLayout({ title, heroTitle, headerAlignLeft = false, 
 
       {/* Page Header */}
       {!hideHeader && (
-        <header className={`mx-auto max-w-7xl py-24 ${headerAlignLeft ? "pl-6 md:pl-24" : "px-6 md:px-12"}`}>
+        <header className={`mx-auto max-w-7xl pt-6 pb-24 ${headerAlignLeft ? "pl-6 md:pl-24" : "px-6 md:px-12"}`}>
           <h1
-            className="text-6xl md:text-7xl lg:text-8xl lowercase"
+            className="text-6xl md:text-7xl lg:text-8xl"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
           >
             {displayTitle}

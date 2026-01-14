@@ -60,7 +60,7 @@ export default function SpectralAudit({
         className="mb-24"
       >
         <h1
-          className="mb-6 text-5xl md:text-7xl lowercase tracking-wide leading-[0.95]"
+          className="mb-6 text-5xl md:text-7xl leading-[0.95]"
           style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
         >
           {title}
@@ -82,10 +82,10 @@ export default function SpectralAudit({
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }}
         >
           <h2
-            className="mb-6 text-xs uppercase tracking-[0.4em] text-black/30"
+            className="mb-6 text-xs tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            the lure (the surface)
+            The Lure (The Surface)
           </h2>
           <p
             className="text-lg md:text-xl leading-relaxed"
@@ -102,10 +102,10 @@ export default function SpectralAudit({
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
         >
           <h2
-            className="mb-6 text-xs uppercase tracking-[0.4em] text-black/30"
+            className="mb-6 text-xs tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            the impact (the reconfiguration)
+            The Impact (The Reconfiguration)
           </h2>
           <p
             className="text-lg md:text-xl leading-relaxed"
@@ -122,10 +122,10 @@ export default function SpectralAudit({
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.5 }}
         >
           <h2
-            className="mb-6 text-xs uppercase tracking-[0.4em] text-black/30"
+            className="mb-6 text-xs tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            the trace (the archaeology)
+            The Trace (The Archaeology)
           </h2>
           <p
             className="text-lg md:text-xl leading-relaxed"
@@ -142,10 +142,10 @@ export default function SpectralAudit({
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.6 }}
         >
           <h2
-            className="mb-6 text-xs uppercase tracking-[0.4em] text-black/30"
+            className="mb-6 text-xs tracking-[0.4em] text-black/30"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
           >
-            the resolution (the grounding)
+            The Resolution (The Grounding)
           </h2>
           <p
             className="text-lg md:text-xl leading-relaxed"

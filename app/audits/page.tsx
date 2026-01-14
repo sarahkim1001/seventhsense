@@ -14,14 +14,14 @@ const auditEntries = [
   },
   {
     id: "002",
-    title: "the uncanny valley of connectivity",
+    title: "The Uncanny Valley of Connectivity",
     category: "social disconnection",
     date: "jan 2025",
     href: "/audits/synthetic-gaze",
   },
   {
     id: "003",
-    title: "unlively trades: a map for a mirror",
+    title: "Unlively Trades: A Map for a Mirror",
     category: "cognitive erosion",
     date: "jan 2026",
     href: "/audits/unlively-trades",
@@ -33,7 +33,7 @@ export default function AuditsPage() {
     <PageLayout title="audits" headerAlignLeft hideHeader>
       <div className="-mx-6 md:-mx-12">
         {/* Custom Hero Section */}
-        <div className="flex min-h-screen flex-col items-center justify-center px-6 md:px-12 pb-24 pt-24">
+        <div className="flex flex-col items-center px-6 md:px-12 pb-24" style={{ paddingTop: '9rem' }}>
           {/* Tier 1: Label */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,10 +58,10 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.15,
             }}
-            className="mb-6 text-center text-5xl md:text-7xl lowercase tracking-wide leading-[0.95]"
+            className="mb-6 text-center text-5xl md:text-7xl leading-[0.95]"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
           >
-            multifaceted ways of being
+            Multifaceted Ways of Being
           </motion.h1>
 
           {/* Tier 3: Secondary Header */}
@@ -73,15 +73,15 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.3,
             }}
-            className="mb-32 text-center text-2xl md:text-3xl lowercase tracking-tight leading-tight text-black/25"
+            className="mb-12 text-center text-2xl md:text-3xl tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
-            tracing the evolution of presence and hybrid spaces.
+            Tracing the Evolution of Presence and Hybrid Spaces.
           </motion.h2>
         </div>
 
         {/* Audit List */}
-        <div className="pl-6 md:pl-24">
+        <div className="pl-6 md:pl-24" style={{ marginTop: '2rem' }}>
           <div className="max-w-7xl">
             {auditEntries.map((audit, index) => (
               <div key={audit.id}>
@@ -99,7 +99,7 @@ export default function AuditsPage() {
 
                   {/* Title (40%) */}
                   <div
-                    className="w-[40%] text-3xl lowercase tracking-tight transition-all duration-300 group-hover:italic"
+                    className="w-[40%] text-3xl tracking-tight transition-all duration-300 group-hover:italic"
                     style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
                   >
                     {audit.title}

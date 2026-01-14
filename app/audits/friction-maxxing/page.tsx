@@ -7,7 +7,7 @@ const auditData = {
   number: "001",
   trace: "persistent",
   coordinate: "jan 2026",
-  title: "the architecture of effort and the erosion of mental modeling",
+  title: "The Architecture of Effort and the Erosion of Mental Modeling",
   subject: "cyborgian" as const,
   sections: {
     lure: "In the accelerated glass-and-steel corridors of Palo Alto, the ultimate virtue is \"frictionless.\" We are told that the goal of the Information Age is the total removal of resistance. We see it in the push for agentic AI—autonomous systems like OpenAI's \"Operator\" that promise to navigate our digital lives so we don't have to. The marketing narrative is seductive: it is a promise of liberation from the \"sludge\" of logistical existence. But as we surrender our friction, what else are we surrendering?",
@@ -27,7 +27,7 @@ const auditData = {
 export default function FrictionMaxxingAuditPage() {
   return (
     <PageLayout title="audit" headerAlignLeft hideHeader>
-      <div className="pl-6 md:pl-24 pt-24">
+      <div className="pl-6 md:pl-24 pt-6">
         <SpectralAudit {...auditData} />
       </div>
     </PageLayout>

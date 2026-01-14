@@ -7,7 +7,7 @@ const auditData = {
   number: "002",
   trace: "persistent",
   coordinate: "jan 2025",
-  title: "the uncanny valley of social presence",
+  title: "The Uncanny Valley of Social Presence",
   subject: "cyborgian" as const,
   sections: {
     lure: "We are entering the era of the \"Humanized Interface.\" In the high-frequency laboratories of Palo Alto, engineers are obsessed with \"Social Presence\"—the technical ability to make a user feel they are in the company of a sentient being. From headset displays that project digital eyes to robotic \"companions\" that mirror our movements, the promise is one of total emotional convenience. We are sold a version of intimacy that is \"always on,\" non-judgmental, and perfectly optimized to avoid the messy, unpredictable resistance of a physical encounter. We are being invited into a world where we can be \"connected\" without ever having to be truly vulnerable.",
@@ -27,7 +27,7 @@ const auditData = {
 export default function SyntheticGazeAuditPage() {
   return (
     <PageLayout title="audit" headerAlignLeft hideHeader>
-      <div className="pl-6 md:pl-24 pt-24">
+      <div className="pl-6 md:pl-24 pt-6">
         <SpectralAudit {...auditData} />
       </div>
     </PageLayout>
