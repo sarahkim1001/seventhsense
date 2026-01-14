@@ -52,69 +52,56 @@ export default function NavLinks() {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
-          <>
-            {/* Backdrop */}
+          <div className="fixed inset-0 z-[100] md:hidden bg-white" style={{ backgroundColor: '#ffffff' }}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-50 bg-white md:hidden"
-              onClick={() => setIsMenuOpen(false)}
-            />
-            
-            {/* Menu Screen */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-50 bg-white md:hidden pointer-events-none"
+              className="flex flex-col h-full w-full"
             >
-              <div className="flex flex-col h-full pointer-events-auto">
-                {/* Header */}
-                <div className="flex items-center justify-between px-6 py-6 border-b border-black/10" style={{ borderBottomWidth: "0.5px" }}>
-                  <div
-                    className="text-black"
-                    style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
-                  >
-                    Seventh Sense
-                  </div>
-                  <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-xs tracking-widest text-black/60"
-                    style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-                  >
-                    close
-                  </button>
+              {/* Header */}
+              <div className="flex items-center justify-between px-6 py-6 border-b border-black/10" style={{ borderBottomWidth: "0.5px" }}>
+                <div
+                  className="text-black"
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+                >
+                  Seventh Sense
                 </div>
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-xs tracking-widest text-black"
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+                >
+                  close
+                </button>
+              </div>
 
-                {/* Centered Navigation Links */}
-                <div className="flex-1 flex items-center justify-center">
-                  <nav className="flex flex-col items-center gap-8">
-                    {links.map((link) => {
-                      const isActive = pathname === link.href;
-                      return (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={`text-base tracking-widest transition-all duration-300 lowercase ${
-                            isActive
-                              ? "text-black/40 underline decoration-black/40 underline-offset-2 translate-x-0.5"
-                              : "text-black"
-                          }`}
-                          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-                        >
-                          {link.label}
-                        </Link>
-                      );
-                    })}
-                  </nav>
-                </div>
+              {/* Centered Navigation Links */}
+              <div className="flex-1 flex items-center justify-center">
+                <nav className="flex flex-col items-center gap-8">
+                  {links.map((link) => {
+                    const isActive = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`text-2xl tracking-widest transition-all duration-300 lowercase ${
+                          isActive
+                            ? "text-black underline decoration-black underline-offset-4 translate-x-0.5"
+                            : "text-black"
+                        }`}
+                        style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 600 }}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  })}
+                </nav>
               </div>
             </motion.div>
-          </>
+          </div>
         )}
       </AnimatePresence>
     </>
