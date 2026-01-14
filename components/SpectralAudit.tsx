@@ -88,8 +88,8 @@ export default function SpectralAudit({
             The Lure (The Surface)
           </h2>
           <p
-            className="text-lg md:text-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+            className="text-lg md:text-xl"
+            style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
           >
             {sections.lure}
           </p>
@@ -108,8 +108,8 @@ export default function SpectralAudit({
             The Impact (The Reconfiguration)
           </h2>
           <p
-            className="text-lg md:text-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+            className="text-lg md:text-xl"
+            style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
           >
             {sections.impact}
           </p>
@@ -128,8 +128,8 @@ export default function SpectralAudit({
             The Trace (The Archaeology)
           </h2>
           <p
-            className="text-lg md:text-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+            className="text-lg md:text-xl"
+            style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
           >
             {sections.trace}
           </p>
@@ -148,8 +148,8 @@ export default function SpectralAudit({
             The Resolution (The Grounding)
           </h2>
           <p
-            className="text-lg md:text-xl leading-relaxed"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+            className="text-lg md:text-xl"
+            style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
           >
             {sections.resolution}
           </p>

@@ -6,10 +6,34 @@ import { useRef } from "react";
 import NavLinks from "@/components/NavLinks";
 
 const navigationItems = [
-  { number: "01", title: "The About", href: "/about" },
-  { number: "02", title: "The Archive", href: "/audits" },
-  { number: "03", title: "The Lexicon", href: "/glossary" },
-  { number: "04", title: "The Artifacts", href: "/art" },
+  { 
+    number: "01", 
+    document: "Document 01 | The Profile", 
+    title: "The Profile",
+    description: "An inquiry into the foundational mission and the \"Sacred Neutral\" perspective of the laboratory.",
+    href: "/about" 
+  },
+  { 
+    number: "02", 
+    document: "Document 02 | The Archive", 
+    title: "The Archive",
+    description: "A longitudinal repository of previous audits, research papers, and technical explorations.",
+    href: "/audits" 
+  },
+  { 
+    number: "03", 
+    document: "Document 03 | The Lexicon", 
+    title: "The Lexicon",
+    description: "A semantic map defining the coordinates used to navigate the intersection of biology and technics.",
+    href: "/glossary" 
+  },
+  { 
+    number: "04", 
+    document: "Document 04 | The Artifacts", 
+    title: "The Artifacts",
+    description: "Material evidence of inquiry, ranging from digital zines to social robotic interfaces.",
+    href: "/art" 
+  },
 ];
 
 export default function Home() {
@@ -21,8 +45,8 @@ export default function Home() {
 
   // Transform scroll progress to line height (0% to 100%)
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  // Transform scroll progress to opacity (0.2 to 0.5)
-  const lineOpacity = useTransform(scrollYProgress, [0, 1], [0.2, 0.5]);
+  // Fixed opacity at 50%
+  const lineOpacity = 0.5;
 
   return (
     <div ref={containerRef} className="min-h-screen bg-white text-black">
@@ -48,7 +72,7 @@ export default function Home() {
       {/* Somatic Meridian - Vertical Line */}
       <div className="fixed left-1/2 top-0 z-10 h-screen w-[1px] -translate-x-1/2">
         <motion.div
-          className="h-full w-full bg-black"
+          className="h-full w-full bg-gray-300"
           style={{
             height: lineHeight,
             opacity: lineOpacity,
@@ -100,52 +124,95 @@ export default function Home() {
           className="mb-12 text-center text-2xl md:text-3xl tracking-tight leading-tight text-black/25"
           style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
         >
-          From Cyborgs to Specters
+          From biological-technical hybrids to spectral traces
         </motion.h2> 
+
+        {/* Subject, Analysis, Goal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.2,
+            ease: [0.25, 0.1, 0.25, 1],
+            delay: 0.45,
+          }}
+          className="mt-8 text-center max-w-3xl mx-auto"
+        >
+          <div className="space-y-2 text-xs text-black/60 tracking-wider">
+            <div style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}>
+              <span className="font-medium">The Subject:</span> Seventh Sense Research Laboratory.
+            </div>
+            <div style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}>
+              <span className="font-medium">The Analysis:</span> Performing cognitive audits on the hidden infrastructures of digital presence.
+            </div>
+            <div style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}>
+              <span className="font-medium">The Goal:</span> To re-establish systemic integrity by grounding technical evolution in historical and somatic roots.
+            </div>
+          </div>
+        </motion.div>
       </div>
 
-      {/* Quote and Mission Statement */}
+      {/* Quote */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1.2,
           ease: [0.25, 0.1, 0.25, 1],
-          delay: 0.4,
+          delay: 0.6,
         }}
-        className="relative z-20 mx-auto max-w-7xl px-6 md:px-12" style={{ marginTop: '7rem', marginBottom: '3rem' }}
+        className="relative z-20 mx-auto max-w-4xl px-6 md:px-12 text-center" style={{ marginTop: '7rem', marginBottom: '3rem' }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Quote - Left */}
-          <div className="text-center md:text-left">
-            <div
-              className="text-lg md:text-xl italic text-black/30"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 300 }}
-            >
-              "The cyborg is a matter of fiction and lived experience."
-            </div>
-            <p
-              className="mt-2 text-xs text-black/20 font-mono"
-              style={{ fontFamily: "monospace" }}
-            >
-              — Donna Haraway
-            </p>
-          </div>
-
-          {/* Mission - Right */}
-          <div className="text-center md:text-left">
-            <div
-              className="text-base md:text-lg leading-relaxed text-black/60"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-            >
-              Seventh Sense is a laboratory of attention performing "audits" on the hidden infrastructures of digital presence. We treat the Information Age not as a departure from history, but as an evolution of technological, sociological, and religious impulses that have driven humanity for millennia.
-            </div>
-          </div>
+        <div
+          className="text-2xl md:text-3xl lg:text-4xl italic text-black/40 mb-4"
+          style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+        >
+          "The cyborg is a matter of fiction and lived experience."
         </div>
+        <p
+          className="text-sm text-black/30"
+          style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+        >
+          — Donna Haraway
+        </p>
       </motion.div>
 
-      {/* Navigation Grid */}
-      <div className="relative z-20 mx-auto max-w-7xl px-6 md:px-12 pb-24" style={{ marginTop: '4rem' }}>
+      {/* Mission Statement */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1],
+          delay: 0.7,
+        }}
+        className="relative z-20 mx-auto max-w-4xl px-6 md:px-12 text-center" style={{ marginBottom: '3rem' }}
+      >
+        <p
+          className="text-base md:text-lg text-black/60"
+          style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+        >
+          Seventh Sense operates as a laboratory of attention, investigating the technical environments that house modern human experience. We do not view the Information Age as a departure from history, but as an evolution of the sociological, religious, and biological impulses that have defined humanity for millennia. Through rigorous mixed-media inquiry, we audit the "infrastructure of the self" to understand how our tools reconfigure our psychology and culture.
+        </p>
+      </motion.div>
+
+      {/* Navigation Index */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1],
+          delay: 0.8,
+        }}
+        className="relative z-20 mx-auto max-w-7xl px-6 md:px-12 pb-24" style={{ marginTop: '4rem' }}
+      >
+        <div
+          className="mb-8 text-xs tracking-widest text-black/50 uppercase"
+          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 100 }}
+        >
+          Navigation Index
+        </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {navigationItems.map((item, index) => (
             <motion.div
@@ -155,74 +222,81 @@ export default function Home() {
               transition={{
                 duration: 1.2,
                 ease: [0.25, 0.1, 0.25, 1],
-                delay: 0.4 + index * 0.1,
+                delay: 0.9 + index * 0.1,
               }}
             >
               <Link
                 href={item.href}
-                className="group block border-b border-black/10 pb-6 transition-all hover:opacity-60"
-                style={{ borderBottomWidth: "0.5px" }}
+                className="group block border border-black/10 p-4 transition-all hover:opacity-60"
+                style={{ borderWidth: "0.5px" }}
               >
                 <div
                   className="mb-2 font-mono text-xs uppercase tracking-widest text-black/40"
                   style={{ fontFamily: "monospace" }}
                 >
-                  {item.number}
+                  {item.document}
                 </div>
-                <div
-                  className="text-xl tracking-tight"
-                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-                >
-                  {item.title}
-                </div>
+            <div
+              className="mb-2 text-xl tracking-tight"
+              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+            >
+              {item.title}
+            </div>
+            <p
+              className="text-sm text-black/50"
+              style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+            >
+              {item.description}
+            </p>
               </Link>
             </motion.div>
           ))}
         </div>
+      </motion.div>
 
-        {/* Most Recent Audit */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1.2,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.6,
-          }}
-          className="mt-24 border-t border-black/10 pt-12" style={{ borderTopWidth: "0.5px" }}
+      {/* Current Investigation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 0.1, 0.25, 1],
+          delay: 1.3,
+        }}
+        className="relative z-20 mx-auto max-w-7xl px-6 md:px-12 mt-24 border-t border-black/10 pt-12" style={{ borderTopWidth: "0.5px" }}
+      >
+        <div
+          className="mb-4 text-xs tracking-widest text-black/50 uppercase"
+          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 100 }}
         >
-          <Link
-            href="/audits/unlively-trades"
-            className="group block transition-all hover:opacity-60"
-          >
+          Current Investigation
+        </div>
+        <Link
+          href="/audits/unlively-trades"
+          className="group block transition-all hover:opacity-60"
+        >
+          <div className="mb-2 flex items-baseline gap-4">
             <div
-              className="mb-2 text-[10px] uppercase tracking-[0.4em] text-black/30"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+              className="font-mono text-xs uppercase tracking-widest text-black/40"
+              style={{ fontFamily: "monospace" }}
             >
-              newest audit
-            </div>
-            <div className="mb-2 flex items-baseline gap-4">
-              <div
-                className="font-mono text-xs uppercase tracking-widest text-black/40"
-                style={{ fontFamily: "monospace" }}
-              >
-                003
-              </div>
-              <div
-                className="text-2xl md:text-3xl tracking-tight"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-              >
-                A Map for a Mirror
-              </div>
+              Audit 003 | A Map for a Mirror
             </div>
             <div
-              className="text-sm text-black/40"
+              className="text-xs uppercase tracking-widest text-black/30"
               style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
             >
-              jan 2026
+              Status: Active
             </div>
-          </Link>
-        </motion.div>
+          </div>
+          <p
+            className="text-base md:text-lg text-black/60 mt-2"
+            style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+          >
+            A diagnostic exploration into algorithmic reflection and the transmutation of archival memory.
+          </p>
+        </Link>
+      </motion.div>
 
         {/* Newest Art Piece */}
         <motion.div
@@ -268,7 +342,6 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
-      </div>
 
       {/* Origin Label */}
       <motion.div

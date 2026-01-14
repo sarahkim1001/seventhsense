@@ -8,44 +8,65 @@ const lexiconEntries = [
   {
     number: "01",
     title: "The Third Body",
+    subject: "Hybrid anatomy.",
+    analysis: "The intersection of biological presence and autonomous machine agency.",
+    goal: "To establish protocols for shared space with non-human intelligence.",
     content:
-      "the manifestation of a hybrid anatomy where biological presence meets autonomous machine agency. if the first body is the physical organism and the second is the digital data-shadow, the third body is the site of social robotics and agentic ai. it is the frontier where we must negotiate the \"sacred awkwardness\" of shared space and decision-making with non-human intelligence.",
+      "If the first body is the physical organism and the second is the digital data-shadow, the Third Body is the site of social robotics and agentic AI. It represents the frontier where human biology must negotiate presence and decision-making with non-human systems.",
   },
   {
     number: "02",
     title: "Wisdom Biodiversity",
+    subject: "Heterogeneous worldviews and ancestral intelligences.",
+    analysis: "Resisting the cognitive monoculture inherent in centralized digital design.",
+    goal: "The preservation of diverse ways of being against algorithmic homogenization.",
     content:
-      "the vast, heterogeneous collection of human worldviews, languages, and ancestral intelligences accumulated over millennia. we treat wisdom biodiversity as a vital social infrastructure, resisting the \"cognitive monoculture\" created when global digital systems are designed by a narrow demographic. it is the preservation of diverse ways of being against algorithmic homogenization.",
+      "Wisdom Biodiversity is treated as vital social infrastructure. It archives the vast collection of human languages and perspectives, protecting them from the narrowing effects of global technical systems designed by a narrow demographic.",
   },
   {
     number: "03",
     title: "Somatic Sovereignty",
+    subject: "The regulated nervous system.",
+    analysis: "Defending the biological vessel against the interception of high-frequency digital environments.",
+    goal: "To maintain physiological presence within the primary body.",
     content:
-      "the inherent right to maintain a grounded, regulated nervous system against the interception of high-frequency digital environments. somatic sovereignty is the practice of remaining present in the first body, resisting the physiological stress responses triggered by \"headless\" technological development and techno-authoritarian surveillance.",
+      "Somatic Sovereignty is the inherent right to maintain a grounded internal state. It is the practice of resisting the stress responses triggered by \"headless\" technological development and technical surveillance.",
   },
   {
     number: "04",
     title: "Cognitive Materiality",
+    subject: "Technical tools as cognitive architecture.",
+    analysis: "Auditing how the design of the interface re-wires human cognitive maps.",
+    goal: "To acknowledge that the design of the tool is the design of the mind.",
     content:
-      "the principle that our material tools—from charcoal sketches to decision-making algorithms—are not just products of thought, but the active architecture of thought. this posits that the design of the interface is the design of the mind; when we change the tools we use to create, we fundamentally re-wire our cognitive maps.",
+      "Cognitive Materiality posits that tools—from charcoal to algorithms—are not just products of thought, but active components of the psyche. When we architect a new interface, we are fundamentally re-ordering the way the brain perceives and creates.",
   },
   {
     number: "05",
     title: "The Great Braiding",
+    subject: "The tethering of innovation to historical and somatic roots.",
+    analysis: "Integrating media theory, theology, and psychology into technical inquiry.",
+    goal: "To balance technological movement with reciprocal ancestral truth.",
     content:
-      "the methodological practice of tethering technical innovation to historical and somatic roots. the great braiding weaves together threads of historical theology, media theory, and cognitive psychology to ensure that every \"forward\" movement in technology is balanced by a reciprocal glance at ancestral truths.",
+      "The Great Braiding is a methodological practice. It ensures that every advancement in technical capability is anchored by a reciprocal investigation into the historical and biological foundations of the human experience.",
   },
   {
     number: "06",
     title: "Digital Orphanhood",
+    subject: "Displacement within anchorless technical environments.",
+    analysis: "Evaluating the loss of intergenerational wisdom in modern digital infrastructure.",
+    goal: "To diagnose the sociological state of cultural disconnection.",
     content:
-      "the sociological state of being situated in a technological environment that lacks a cultural or historical anchor. digital orphanhood describes the displacement felt when our infrastructures for survival are designed without regard for the intergenerational wisdom and trauma that shape human behavior.",
+      "Digital Orphanhood describes the state of being situated in systems that lack a cultural or historical anchor. It is the result of survival infrastructures designed without regard for the deep-time wisdom that stabilizes human behavior.",
   },
   {
     number: "07",
     title: "Techno-Theology",
+    subject: "The encoding of religious impulses into contemporary code.",
+    analysis: "Analyzing narratives of salvation and transcendence within technical development.",
+    goal: "To audit the spiritual frameworks driving the pursuit of AGI.",
     content:
-      "the study of how religious impulses—the search for omniscience, salvation, and transcendence—are re-encoded into contemporary code. this framework analyzes the \"sacramental\" nature of data and the \"eschatological\" narratives (stories of the end-times or transcendence) driving the modern pursuit of artificial general intelligence.",
+      "Techno-Theology treats data as a sacramental force. It examines how the human search for omniscience and transcendence is redirected into the pursuit of Artificial General Intelligence and digital immortality.",
   },
 ];
 
@@ -100,12 +121,30 @@ export default function GlossaryPage() {
             className="mb-12 text-center text-2xl md:text-3xl tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
-            For Keeping in Mind (Mind Keeping).
+            
           </motion.h2>
         </div>
 
-        {/* Lexicon of Inquiries */}
-        <div className="space-y-24 md:space-y-32" style={{ marginTop: '2rem' }}>
+        {/* Document Header */}
+        <div className="pl-6 md:pl-24" style={{ marginTop: '2rem' }}>
+          <div className="max-w-4xl mb-16">
+            <div
+              className="mb-4 text-xs tracking-widest text-black/50 uppercase"
+              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 100 }}
+            >
+              Document 01: Core Lexicons
+            </div>
+            <p
+              className="text-base md:text-lg text-black/60"
+              style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
+            >
+              Overview: This catalog defines the technical and cognitive coordinates used to audit the intersection of biological systems and digital environments.
+            </p>
+          </div>
+        </div>
+
+        {/* Lexicon Entries */}
+        <div className="space-y-24 md:space-y-32">
           {lexiconEntries.map((entry, index) => (
             <motion.div
               key={entry.number}
@@ -136,10 +175,32 @@ export default function GlossaryPage() {
                   </h2>
                 </div>
 
+                {/* Subject, Analysis, Goal */}
+                <div className="mb-6 space-y-2">
+                  <div
+                    className="text-xs text-black/60 tracking-wider"
+                    style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                  >
+                    <span className="font-medium">Subject:</span> {entry.subject}
+                  </div>
+                  <div
+                    className="text-xs text-black/60 tracking-wider"
+                    style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                  >
+                    <span className="font-medium">Analysis:</span> {entry.analysis}
+                  </div>
+                  <div
+                    className="text-xs text-black/60 tracking-wider"
+                    style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                  >
+                    <span className="font-medium">Goal:</span> {entry.goal}
+                  </div>
+                </div>
+
                 {/* Entry Content */}
                 <p
-                  className="text-lg md:text-xl leading-relaxed"
-                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                  className="text-lg md:text-xl"
+                  style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
                 >
                   {entry.content}
                 </p>

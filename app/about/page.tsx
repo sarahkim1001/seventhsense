@@ -7,36 +7,48 @@ import BiologicalGrowth from "@/components/BiologicalGrowth";
 const triptychModules = [
   {
     label: "we are",
-    title: "the cyborgian organism",
+    title: "Archaeologies of the Biological-Technical Hybrid",
+    subject: "A longitudinal inquiry into the biological-technical hybrid.",
+    analysis: "The Analysis: Auditing how digital tools reshape our physical senses and daily presence..",
+    goal: "To re-establish systemic integrity by surfacing the spectral traces of our digitized existence.",
     content:
-      "We embrace the cyborg not as a creature of science fiction, but as the lived reality of the Information Age. Following the thought of Donna Haraway, we see the cyborg as a \"matter of fiction and lived experience\" that fundamentally changes what it means to be human. We are hybrids of biology and technology, existing in a space where the boundaries between the \"natural\" body and the \"artificial\" grid have blurred. By auditing these connections, we do not seek to return to an \"innocent\" or \"pure\" past; instead, we look for a new kind of grounding—one that understands how our tools shape our identities, our politics, and our presence in the world. We are here to map the spectral traces of this hybrid life to understand how we are the way we are.",
+      "We acknowledge the hybrid state not as a speculative fiction, but as a current material reality. Following the lineage of Stiegler and Haraway, we recognize that the \"natural\" body and the \"artificial\" grid have merged into a singular cognitive architecture. By auditing these connections, we bypass the nostalgia for a \"pure\" past. Instead, we architect a new grounding, investigating how our technical tools dictate the boundaries of identity, governance, and somatic presence.",
   },
   {
     label: "the premise",
-    title: "the architecture of belief",
+    title: "Architectures of Belief",
+    subject: "Cognitive maps and material systems.",
+    analysis: "Evaluating the evolution of mental models and sociological impulses.",
+    goal: "To map the reconfiguration of human belief systems within the digital architecture.",
     content:
-      "Every culture, from antiquity to the present, has developed belief systems and material tools to navigate the \"strange phenomena of living.\" These are our mental models—the maps we use to survive, connect, and thrive. This site explores how the Information Age—with its screens, data, and agentic AI—is reconfiguring those maps. We treat contemporary technoculture not as a departure from history, but as an evolution of the same religious and sociological impulses that have always driven human society.",
+      "Human culture has consistently utilized belief systems as navigational interfaces for the \"phenomena of living.\" We view contemporary technoculture—defined by high-frequency screens and agentic AI—not as a historical rupture, but as a site of rapid evolution. This inquiry audits how our current technical environment re-architects the maps we use to survive and connect.",
   },
   {
     label: "the mission",
-    title: "a laboratory of attention",
+    title: "A Laboratory of Attention",
+    subject: "The infrastructure of the self within the Palo Alto ecosystem.",
+    analysis: "Auditing the psychological cost of interface frictionlessness.",
+    goal: "To serve as a diagnostic integrity layer for understudied technical phenomena.",
     content:
-      "Silicon Valley's rapid development often moves forward without a historical or cultural anchor. This site acts as an integrity layer, performing \"audits\" on understudied phenomena within tech culture. By weaving together Cognitive Psychology, History, and Media Theory, we ask what happens to human functioning when our environments are designed by a narrow subset of the population. We are here to pay attention to what remains and what evolves.",
+      "The acceleration of Silicon Valley often lacks a historical anchor, prioritizing speed over systemic health. This site functions as a diagnostic laboratory, applying the rigors of Cognitive Psychology and Media Theory to the digital world. We audit the impact on human functioning when our technical environments are architected by a narrow demographic, focusing on what remains of the human vessel when the environment is in constant flux.",
   },
   {
     label: "the methodology",
-    title: "tracing the logic of creation",
+    title: "Tracing the Logic of Technical Creation",
+    subject: "Modern technical artifacts and genealogical traces.",
+    analysis: "Bridging contemporary proprioception and decision-making to ancestral roots.",
+    goal: "To restore individual sovereignty and reciprocity in a quantified world.",
     content:
-      "Our expositions are not just critiques; they are genealogical traces. We look at a modern technical artifact—be it a robot's proprioception or an AI's decision-making tree—and bridge it back to its historical and spiritual roots. We aim for a certain truth: an understanding of how our designs affect our ability to stay grounded, reciprocal, and present in a rapidly shifting world.",
+      "Our inquiries are framed as mixed-media inquiries rather than static critiques. We treat a robot's proprioception or an algorithmic decision-tree as a site for archaeological excavation, tracing these designs back to their spiritual and historical foundations. This rigorous research method seeks to understand how specific architectures affect the body's ability to remain cognitively resonant and present.",
   },
 ];
 
 const practiceOfAttention = [
-  "What remains when everything is quantified?",
-  "How do we stay grounded in a world of screens?",
-  "What happens to attention when it becomes a commodity?",
-  "How do we maintain reciprocity in asymmetric systems?",
-  "What does presence mean in an age of constant connection?",
+  "The Somatic Residual: What remains of the human vessel when the self is fully quantified?",
+  "Environmental Grounding: How is somatic presence maintained within a high-density technical environment?",
+  "The Commodity of Focus: How is the human cognitive faculty altered when attention is treated as a systemic resource?",
+  "Relational Reciprocity: How is reciprocity architected within asymmetric digital systems?",
+  "Presence vs. Connectivity: How is biological presence redefined within a state of perpetual technical interface?",
 ];
 
 export default function AboutPage() {
@@ -88,7 +100,7 @@ export default function AboutPage() {
             className="mb-12 text-center text-2xl md:text-3xl tracking-tight leading-tight text-black/25"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
-         Amidst the Age of Information
+         
           </motion.h2>
         </div>
 
@@ -124,10 +136,32 @@ export default function AboutPage() {
                   {module.title}
                 </h2>
 
+                {/* Subject, Analysis, Goal */}
+                <div className="mb-6 space-y-2">
+                <div
+                  className="text-xs text-black/60 tracking-wider"
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                >
+                  <span className="font-medium">Subject:</span> {module.subject}
+                </div>
+                <div
+                  className="text-xs text-black/60 tracking-wider"
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                >
+                  <span className="font-medium">Analysis:</span> {module.analysis}
+                </div>
+                <div
+                  className="text-xs text-black/60 tracking-wider"
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                >
+                  <span className="font-medium">Goal:</span> {module.goal}
+                </div>
+                </div>
+
                 {/* Module Content */}
                 <p
-                  className="text-lg md:text-xl leading-relaxed"
-                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                  className="text-lg md:text-xl"
+                  style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
                 >
                   {module.content}
                 </p>
@@ -152,17 +186,17 @@ export default function AboutPage() {
             className="mb-6 text-xs tracking-widest text-black/50 uppercase"
             style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 100 }}
           >
-            practice of attention
+            auditing the practice of attention
           </div>
           <div className="max-w-4xl space-y-3">
             {practiceOfAttention.map((question, index) => (
-              <div
+              <p
                 key={index}
                 className="text-sm md:text-base text-black/70"
-                style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
+                style={{ fontFamily: "var(--font-eb-garamond)", fontWeight: 400, lineHeight: "1.6" }}
               >
                 {question}
-              </div>
+              </p>
             ))}
           </div>
         </motion.div>
