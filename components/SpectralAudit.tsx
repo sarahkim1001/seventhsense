@@ -32,22 +32,16 @@ export default function SpectralAudit({
       <div className="mb-16 flex items-start justify-between border-b border-black/10 pb-4" style={{ borderBottomWidth: "0.5px" }}>
         <div
           className="text-[10px] uppercase tracking-[0.4em] text-black/30"
-          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
         >
           audit // {number}
         </div>
         <div className="text-right">
           <div
             className="text-[10px] uppercase tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             trace: {trace}
-          </div>
-          <div
-            className="mt-1 text-[10px] uppercase tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
-          >
-            coordinate: {coordinate}
           </div>
         </div>
       </div>
@@ -61,7 +55,7 @@ export default function SpectralAudit({
       >
         <h1
           className="mb-6 text-5xl md:text-7xl leading-[0.95]"
-          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
         >
           {title}
         </h1>
@@ -83,7 +77,7 @@ export default function SpectralAudit({
         >
           <h2
             className="mb-6 text-xs tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             The Lure (The Surface)
           </h2>
@@ -103,7 +97,7 @@ export default function SpectralAudit({
         >
           <h2
             className="mb-6 text-xs tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             The Impact (The Reconfiguration)
           </h2>
@@ -123,7 +117,7 @@ export default function SpectralAudit({
         >
           <h2
             className="mb-6 text-xs tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             The Trace (The Archaeology)
           </h2>
@@ -143,7 +137,7 @@ export default function SpectralAudit({
         >
           <h2
             className="mb-6 text-xs tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             The Resolution (The Grounding)
           </h2>
@@ -165,7 +159,7 @@ export default function SpectralAudit({
       >
         <div
           className="mb-6 text-xs uppercase tracking-[0.4em] text-black/30"
-          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+          style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
         >
           source // trace
         </div>

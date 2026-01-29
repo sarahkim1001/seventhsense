@@ -13,10 +13,16 @@ export default function GraphPaperGrid() {
     if (!ctx) return;
 
     const updateCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const parent = canvas.parentElement;
+      if (parent) {
+        canvas.width = parent.clientWidth;
+        canvas.height = parent.clientHeight;
+      } else {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
 
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.03)";
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.05)";
       ctx.lineWidth = 0.5;
 
       const gridSize = 40;
@@ -39,14 +45,28 @@ export default function GraphPaperGrid() {
     };
 
     updateCanvas();
+    
+    // Use ResizeObserver to watch parent container size changes
+    const resizeObserver = new ResizeObserver(() => {
+      updateCanvas();
+    });
+    
+    const parent = canvas.parentElement;
+    if (parent) {
+      resizeObserver.observe(parent);
+    }
+    
     window.addEventListener("resize", updateCanvas);
-    return () => window.removeEventListener("resize", updateCanvas);
+    return () => {
+      window.removeEventListener("resize", updateCanvas);
+      resizeObserver.disconnect();
+    };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="absolute inset-0 z-0 pointer-events-none"
       style={{ pointerEvents: "none" }}
     />
   );

@@ -11,34 +11,13 @@ export default function NavLinks() {
 
   const links = [
     { href: "/", label: "home" },
-    { href: "/audits", label: "audits" },
-    { href: "/art", label: "art" },
-    { href: "/glossary", label: "glossary" },
+    { href: "/garden", label: "garden" },
     { href: "/about", label: "about" },
   ];
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center gap-8">
-        {links.slice(1).map((link) => {
-          const isActive = pathname === link.href;
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-xs tracking-widest transition-all duration-300 ${
-                isActive
-                  ? "text-black/40 underline decoration-black/40 underline-offset-2 translate-x-0.5"
-                  : "text-black"
-              }`}
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
-      </div>
+      {/* Navigation removed - using SideNav component instead */}
 
       {/* Mobile Menu Button */}
       <button
@@ -64,14 +43,14 @@ export default function NavLinks() {
               <div className="flex items-center justify-between px-6 py-6 border-b border-black/10" style={{ borderBottomWidth: "0.5px" }}>
                 <div
                   className="text-black"
-                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                 >
-                  Seventh Sense
+                  cyborgania
                 </div>
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="text-xs tracking-widest text-black"
-                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+                  style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                 >
                   close
                 </button>
@@ -87,12 +66,14 @@ export default function NavLinks() {
                         key={link.href}
                         href={link.href}
                         onClick={() => setIsMenuOpen(false)}
-                        className={`text-2xl tracking-widest transition-all duration-300 lowercase ${
+                        className={`text-2xl tracking-widest transition-all duration-300 lowercase hover:scale-[1.02] ${
                           isActive
                             ? "text-black underline decoration-black underline-offset-4 translate-x-0.5"
-                            : "text-black"
+                            : link.href === "/"
+                              ? "text-black/60 hover:text-black"
+                              : "text-black"
                         }`}
-                        style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 600 }}
+                        style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                       >
                         {link.label}
                       </Link>

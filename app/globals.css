@@ -4,6 +4,12 @@
   --background: #ffffff;
   --foreground: #000000;
   --border-color: #e5e5e5;
+  
+  /* Gradient Colors - Digital Fog Palette */
+  --gradient-mint: #a8f3f3;
+  --gradient-lavender: #e6d6f6;
+  --gradient-ridescent-pink: #f4c4e4;
+  --gradient-soft-blue: #c8e8f8;
 }
 
 @theme inline {

@@ -56,7 +56,7 @@ export default function AuditsPage() {
               delay: 0,
             }}
             className="mb-2 text-center text-[10px] uppercase tracking-[0.4em] text-black/30"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
             audits
           </motion.div>
@@ -70,8 +70,8 @@ export default function AuditsPage() {
               ease: [0.25, 0.1, 0.25, 1],
               delay: 0.15,
             }}
-            className="mb-6 text-center text-5xl md:text-7xl leading-[0.95]"
-            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+            className="mb-6 text-center text-4xl md:text-5xl lg:text-6xl leading-[0.95]"
+            style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
           >
            Hybrid Ontologies
           </motion.h1>
@@ -97,13 +97,13 @@ export default function AuditsPage() {
           <div className="max-w-7xl mb-16">
             <div
               className="mb-4 text-xs tracking-widest text-black/50 uppercase"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 100 }}
+              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
             >
               Document Series: Multifaceted Ways of Being
             </div>
             <h2
               className="mb-4 text-2xl md:text-3xl tracking-tight"
-              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 500 }}
+              style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
             >
               A Longitudinal Trace of Presence and Hybrid Environments
             </h2>
@@ -133,8 +133,18 @@ export default function AuditsPage() {
               >
                 <Link
                   href={audit.href}
-                  className="group block border border-black/10 p-6 transition-all hover:opacity-60"
-                  style={{ borderWidth: "0.5px" }}
+                  className="group block border border-black/10 p-6 transition-all hover:scale-[1.02] hover:opacity-60 backdrop-blur-[10px]"
+                  style={{ 
+                    borderWidth: "0.5px",
+                    borderColor: "rgba(255, 255, 255, 0.3)",
+                    boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = "0 4px 20px rgba(244, 196, 228, 0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0)";
+                  }}
                 >
                   {/* Audit Header */}
                   <div className="mb-6">
@@ -152,19 +162,19 @@ export default function AuditsPage() {
                       className="text-xs text-black/60 tracking-wider"
                       style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                     >
-                      <span className="font-medium">The Subject:</span> {audit.subject}
+                      <span>The Subject:</span> {audit.subject}
                     </div>
                     <div
                       className="text-xs text-black/60 tracking-wider"
                       style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                     >
-                      <span className="font-medium">The Analysis:</span> {audit.analysis}
+                      <span>The Analysis:</span> {audit.analysis}
                     </div>
                     <div
                       className="text-xs text-black/60 tracking-wider"
                       style={{ fontFamily: "var(--font-neue-montreal)", fontWeight: 400 }}
                     >
-                      <span className="font-medium">The Goal:</span> {audit.goal}
+                      <span>The Goal:</span> {audit.goal}
                     </div>
                   </div>
 

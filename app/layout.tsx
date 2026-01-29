@@ -44,7 +44,7 @@ const neueMontreal = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Seventh Sense",
+  title: "cyborgania",
   description: "Archaeologies of a Cyborgian Organism",
   icons: {
     icon: "/img/seventhsensefavicon.png",
